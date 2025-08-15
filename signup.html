@@ -3,41 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GitHub Sign In</title>
 </head>
 <body style="background-color:darkgray">
     <center>
-    <img src="githubpic.png" width="15%"/>
-    <p><font color="black" size="6" face="arial">Sign in to GitHub</font></p>
+    <img src="githubpic.png" width="15%" alt="GitHub Logo" title="github"/>
+
+    <p><font color="black" size="6" face="Arial">Sign in to GitHub</font></p>
+
     <form auto="" method="">
 
       <br>
-      <font color="black" size="3" face=""><label>Username/Email:</label></font>
-    <input type="text" placeholder="Enter Username or Email"/>
 
-    <br>
-    <br>
+      <fieldset style="width:300px; height:150px; background-color: white;">
 
-    <font color="black" size="3" face=""><label>Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></font>
-    <input type="password" placeholder="Enter Password"/>
-    <br>
-    <br>
-    <input type="checkbox" id="remember"/>
-    <label>Remember me</label>
-     <a href=""><h4><font color="blue" size="2">Forgot Password?</font></h4></a>
+        <font color="black" size="4" face="Arial">
+            <label>Username/Email:</label>
+        </font>
+        <br>
+        <input type="text" placeholder="Enter Username or Email" size="35"/>
 
-<input type="submit" value="Sign In" style="width:300px; background-color:green; color: white;" />
-<p><font color="black" size="3" face="arial">New GitHub?</font></p>
-<a href="#"><h4><font color="blue" size="2">Create Account</font></h4></a>
+        <br>
+        <br>
 
+        <font color="black" size="4" face="Arial">
+            <label>Password:</label>
+        </font>
+        <br>
+        <input type="password" placeholder="Enter Password" size="35"/>
 
-<a href=""><h4><font color="blue" size="2">Term | </font></h4></a>
-<a href=""><h4><font color="blue" size="2">Privacy | </font></h4></a>
-<a href=""><h4><font color="blue" size="2">Security | </font></h4></a>
-<a href=""><h4><font color="blue" size="2">Contact Us</font></h4></a>
+        <br>
+        <br>
 
+        <table width="100%">
+          <tr>
+            <td align="left">
+              <font color="black" size="3" face="Arial">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember me</label>
+              </font>
+            </td>
+            <td align="right">
+              <a href="#">
+                <font color="blue" size="3" face="Arial">Forgot Password?</font>
+              </a>
+            </td>
+          </tr>
+        </table>
 
+      </fieldset>
 
+      <br>
+
+      <fieldset style="width:300px; height:40px; background-color: white;">
+        <input type="submit" value="Sign In" style="width:300px; height:30px; background-color:green; color: white;" />
+      </fieldset>
+
+      <p>
+        <a href=""><font color="blue" size="3" face="Arial">Terms</font></a> |
+        <a href=""><font color="blue" size="3" face="Arial">Privacy</font></a> |
+        <a href=""><font color="blue" size="3" face="Arial">Security</font></a> |
+        <a href=""><font color="blue" size="3" face="Arial">Contact Us</font></a>
+      </p>
 
     </form>
     </center>
