@@ -95,34 +95,257 @@ border:5px solid black;
         margin:20px 10px 30px 50px;
     }
 
-    #float1
-    {
-     width:250px;
-      height:250px;
-      outline:50px green  ;
-     border:3px solid black;
-     border-radius: 20px 1px;
-     margin:20px 10px 30px 50px;
-     padding: 20px 20px 30px 40px;
-     background-color:red;
-      box-shadow: 6px 6px 10px black;
-      float:left;
+#font1{
+width:400px;
+border:5px solid black;
+padding:20px 50px;
+margin: 20px 50px;
+}
+
+#font2{
+width:400px;
+border:5px solid black;
+padding:20px 50px;
+margin: 20px 50px;
+font-size: 20px;
+line-height: 30px;
+font-weight:bold;
+font-style: italic oblique;
+font-variant: small-caps;
+}
+
+#font3{
+    border:5px solid blue;
+padding:20px 50px;
+margin: 20px 50px;
+    font:oblique small-caps normal 20px/30px arial,impact,verdana;
+}
+
+#textpr{
+    border:5px solid tan;
+padding:20px 50px;
+margin: 20px 50px;
+    font:oblique small-caps normal 20px/30px arial,impact,verdana;
+    text-align:left;
+    text-align-last:auto;
+    text-indent: 50px;
+    letter-spacing:5px;
+}
+
+#textdec{
+    width:600px;
+    height:200px;
+     border:3px solid grey;
+     margin-top:30px;
+     padding: 20px 20px;
+      font:oblique small-caps bold 15px/30px arial,impact,verdana;
+     text-decoration:underline red double  ;
     
-    }
+}
 
-    #float2
-    {
-        width:225px;
-        height:250px;
-        border:3px solid black;
-        border-radius: 1px 20px;
-        margin-right:20px 10px 30px 50px;
-     padding: 20px 10px 30px 50px;
-     background-color: gray;
-      box-shadow: 6px 6px 10px green;
-      float:right;
-    }
+#wordwrapp{
+    width:400px;
+    border:2px solid red;
+    margin-top:20px;
+    word-wrap: break-word;
+}
 
+#textshadow{
+    margin-top:20px;
+    text-shadow: -2px 2px 3px red,-2px 2px 5px green;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    writing-mode:vertical-lr;
+    
+}
+
+
+#whitespace{
+       width:400px;
+       border: 3px solid blue;
+       border-radius:10px;
+       padding:5px 5px;
+       margin-top:20px;
+       font:oblique small-caps normal 20px/30px arial,impact,verdana;
+       white-space:normal;
+
+      
+}
+
+#overflow{
+    width:400px;
+       border: 3px solid blue;
+       border-radius:10px;
+       padding:5px 5px;
+       margin-top:20px;
+       font:oblique small-caps normal 20px/30px arial,impact,verdana;
+       white-space:nowrap;
+       overflow:scroll;
+}
+
+#writingmode{
+  width:400px;
+  border:3px solid brown;
+  border-radius:10px;
+  margin-top: 20px;
+  padding: 10px 10px;
+  writing-mode:horizontal-tb;
+}
+
+#colcount{
+width:400px;
+border:2px solid olivedrab;
+border-radius:7px;
+margin-top: 20px;
+column-count:3;
+column-gap: 50px;
+column-rule:5px solid red;
+}
+
+
+#ul{
+list-style-type: disc;
+}
+
+#ol{
+list-style-type:upper-alpha;
+}
+
+#bgsize{
+    width:600px;
+    height: 200px;
+    border:5px dotted rgb(255,0,0);
+    padding:20px 20px;
+    margin:20px;
+    background-color: burlywood;
+    background-image: url(babar.webp);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-origin:content-box;
+    opacity: 0.5;
+}
+
+#gradient{
+width:600px;
+height: 200px;
+border:3px solid black;
+padding: 20px 20px;
+background: linear-gradient(red,rgba(255,0,0,0));
+}
+  
+#gradient1{
+width:600px;
+height: 200px;
+border:3px solid black;
+padding: 20px 20px;
+margin-top: 20px;
+background: radial-gradient(circle,red 5%,yellow 15%,green 60%)
+}
+  
+#gradient2{
+width:600px;
+height: 200px;
+border:3px solid black;
+padding: 20px 20px;
+margin-top: 20px;
+background: radial-gradient(closest-side at 90% 50%,red,yellow,green)
+}
+
+
+#box1{
+width:400px;
+height:200px;
+padding:20px 20px;
+margin-top: 20px;
+border:5px solid cadetblue;
+background: linear-gradient(to right,yellow,green),url(babar.webp);
+background-blend-mode:normal;
+}
+
+ul{
+    border:2px solid black;
+    visibility: visible;
+   
+}
+li{
+    border:2px solid blue;
+    display:inline;
+}
+
+span{
+    border:2px solid brown;
+    display: block;
+    margin-top: 20px;
+}
+a{
+    border:2px solid brown;
+    display: block;
+    margin-top: 20px;
+}
+#test{
+    width:150px;
+    height:150px;
+    border:3px solid black;
+    background: pink;
+    left: 100px;
+    overflow: auto;
+    resize: both;
+    cursor:pointer ;
+    
+}
+
+table{
+    border-collapse: collapse;
+}
+
+#clipPath{
+    resize:both;
+  overflow: auto;
+}
+
+ img{
+    clip-path: circle(20% at 50% 50%);
+    float:left;
+    shape-outside: circle(30% at 50% 50%);
+    filter:blur(100)
+    
+}
+  
+#transition{
+    border:3px solid black;
+    width:150px;
+    height:150px;
+    background-color:pink;
+    transition: all 2s linear 1s;
+}
+
+#transition:hover{
+    width:300px;
+     height:300px;
+     background: orange;
+}
+
+#transform{
+    width:200px;
+    height:200px;
+    background-color: darkgreen;
+    margin-top: 20px;
+    border:3px solid black;
+    transform:rotate(30deg);
+    transform-origin: left top;
+    text-align: center;
+}
+
+
+.card{
+    width:300px;
+    height:300px;
+border:3px solid black;
+position:absolute;
+margin-top: 100px;
+ background-color:blue;
+}
 </style>
 
 </head>
@@ -191,13 +414,193 @@ border:5px solid black;
     <div id="bcolor">  
     </div>
 
-   <div id="float1"> <!--m.imp in css-->
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam. Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
+
+<div id="font1">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam. Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
 
 </div>
 
-<div id="float2"> <!--m.imp in css-->
+<div id="font2">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
+
+</div>
+
+<div id="font3">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
+
+</div>
+
+<div id="textpr">
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
+</div>
+
+<div id="textdec">
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
+</div>
+
+<div id="wordwrapp">
+ Lorem veeeeeerrrrrrrrrrrrrrrrrrrrrrrrrrrrryyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy longgggggggggggggggggggggggggggggggggggg ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
+</div>
+
+<div id="textshadow">
+<center><h2>Shahzaib Shafique</h2></center>
+</div>
+
+
+<div id="whitespace">
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit.   
+ Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, 
+ eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare
+  ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora 
+  torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum 
+  pharetra bibendum.
+
+
+</div>
+
+<div id="overflow">
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
+</div>
+
+<div id="writingmode">
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
+</div>
+
+
+<div id="colcount">
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
+</div>
+
+
+<ul >
+    <li>Shahzaib</li>
+    <li>Shabby</li>
+    <li>Aman</li>
+    <li>Arsh</li>
+    <li>Wasif</li>
+    <li>Basit</li>
+</ul>
+
+<ol >
+    <li>Shahzaib1</li>
+    <li>Shabby2</li>
+    <li>Aman3</li>
+    <li>Arsh4</li>
+    <li>Wasif5</li>
+    <li>Basit6</li>
+</ol>
+
+<div id="bgsize">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam. Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
+</div>
+
+
+<div id="gradient">
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
+</div>
+
+<div id="gradient1">
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
+</div>
+
+<div id="gradient2">
+
+</div>
+
+<div id="box1">
+ Shahzaib shafique
+</div>
+
+<h2>Babar Azam</h2>
+<ul>
+    <li>ab</li>
+    <li>cd</li>
+    <li>ef</li>
+    <li>gh</li>
+</ul>
+<span>1</span>
+<span>2</span>
+<span>3</span>
+<span>4</span>
+<span>5</span>
+
+<a href="">first</a>
+<a href="">second</a>
+<a href="">third</a>
+
+
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.</p>
+
+<div id="test">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum
+</div>
+
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.</p>
+
+
+<div>
+    <caption>Employees Record</caption>
+    <table border="1" cellspacing="2" cellpadding="2">
+
+     
+            <tr>
+             <th>firstName</th>
+            <th>lastName</th>
+           <th>Savings</th>
+            </tr>
+      
+        <tr>
+            <td>Shahzaib</td>
+            <td>Shafique</td>
+            <td>100$</td>
+        </tr>
+        <tr>
+             <td>Aman</td>
+            <td>Khan</td>
+            <td>150$</td>
+        </tr>
+        <tr>
+             <td>Basit</td>
+            <td>Ali</td>
+            <td>200$</td>
+        </tr>
+        <tr>
+             <td>wasif</td>
+            <td>Raza</td>
+            <td>250$</td>
+        </tr>
+    </table>
+</div>
+
+
+<br>
+<br>
+
+<div id="clipPath">
+    
+    <img src="road.avif" alt="" title="road" />
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.</p>
+
+
+</div>
+
+
+<div id="transition">
+
+</div>
+
+<div id="transform">
+shahzaib shafique
+</div>
+
+<div class="card">
 
 </div>
 

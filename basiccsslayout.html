@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Layout</title>
+    <style>
+
+        :root {
+            --main-color: crimson;
+        }
+
+body{
+    font-family: arial,impact,verdana;
+    background-color: slategray;
+    margin:0;
+    padding: 0;
+}
+
+
+  #wrapper{
+    border:2px solid black;
+    width:1000px;
+    background:white;
+    margin:0 auto;
+  }
+
+  #header{
+    background-color:var(--main-color);
+    height:100px;
+    color:white;
+  }
+  #header h1{
+    padding:30px 0 0 20px
+  }
+  #menu{
+    background-color: lightsalmon;
+  }
+  #menu li{
+    display: inline-block;
+  }
+  #menu li a{
+    display:block;
+    padding:10px 13px;
+    color:black;
+    text-decoration: none;
+  }
+
+  #menu li a:hover{
+    background:crimson;
+    color:aliceblue;
+  }
+  #menu ul{
+    padding:0;
+    margin: 0;
+  }
+  #content{
+    width:800px;
+    float:left;
+    min-height: 500px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  #sidebar{
+    background-color: lightblue;
+     width:200px;
+     min-height: 500px;
+      float:right;
+  }
+  #sidebar a{
+color:black;
+text-decoration: none;
+  }
+  #footer{
+    background-color:tan;
+    padding: 5px 10px;
+    clear:both;
+    text-align: right;
+  }
+
+
+
+
+    </style>
+</head>
+<body>
+    
+<div id="wrapper">
+<div id="header">
+    <h1>Tech Titan</h1>
+</div>
+<div id="menu">
+    <ul>
+        <li><a href="">Home</a></li>
+      <li><a href="">About us </a></li>
+        <li><a href="">Profile</a></li>
+        <li><a href="">Contact us</a></li>
+
+    </ul>
+</div>
+<div id="content">
+    <h2>Design Basic</h2>
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam. Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.</p>
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam. Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.</p>
+</div>
+<div id="sidebar">
+    <ul>
+        <li><a href="">Home</a></li>
+      <li><a href="">About us </a></li>
+        <li><a href="">Profile </a></li>
+        <li><a href="">Contact us</a></li>
+
+    </ul>
+</div>
+<div id="footer">
+    shahzaibshafique734@copyright2022
+</div>
+</div>
+
+</body>
+</html>
