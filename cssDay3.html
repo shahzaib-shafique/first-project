@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 of CSS</title>
+</head>
+<style>
+/*#animation{
+    width:200px;
+    height:200px;
+    background-color:white;
+    color:blue;
+    position: absolute;
+    top:50%;
+    left:50%;
+   margin:-150px; 
+       text-align: center;
+       line-height:170px;
+       box-shadow: 0px 0px 15px gray;
+       animation-name: sample;
+       animation-duration: 2s;
+       animation-delay: 2s;
+       animation-iteration-count: 3;
+       animation-direction: alternate;
+       animation-timing-function: linear;
+
+       /*animation: sample 2s 3 alternate;
+}*/
+
+/*#animation{
+    width:200px;
+    height:200px;
+    background-color:black;
+    margin-left: 20px;
+    animation: sample 2s 2s both;
+    
+}
+@keyframes sample {
+    0%{background: yellow;width:250px;}
+    50%{background: green;width:350px;}
+    100%{background: red;width:450px;}
+}*/
+
+/*#box{
+    width:300px;
+    height:300px;
+    background-color: tan;
+    color: black;
+    border:3px solid brown;
+    margin-left:20px;
+    padding: 10px;
+    user-select: text;
+   
+}*/
+
+
+/*span{
+    background-color: wheat;
+    font-size: 20px;
+    border:3px solid black;
+}
+
+q{
+    quotes: "$" "&" "'" "'";
+}
+
+#box{
+    width:250px;
+    height:250px;
+    border:2px solid black;
+    padding:10px;
+    margin-left: 10px;
+    text-align:justify;
+    border-image-source: url(borderimg.png);
+    border-image-slice:20;
+}
+
+p{
+    text-align: justify;
+    line-height: 600px;
+    font-size:15px;
+}
+
+p::before{
+    content: "Hello";
+    background-color: red; 
+}
+p::after{
+    content: "world";
+    background-color: green; 
+}
+
+p{
+    font-size: medium;
+    text-align: justify;
+    margin-top: 300px;
+    margin-left: 40px;
+}
+
+p::after{
+    content: attr(class);
+    color: red;
+    font-size: medium;
+}*/
+
+/*body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    background-color: lightgray;
+    width:740px;
+    margin:70px 0 0 50px;
+    display: grid;
+    grid-template-columns:230px 230px 240px;
+    grid-template-rows:230px 230px;
+    grid-gap:20px 20px;
+
+    
+
+}
+
+.items1{
+    /*background-color: orangered;
+    grid-row:2/3;       start/end
+   grid-column:3/4;    start/end
+  /* grid-area: 2/3/3/4;  rS/cS/rE/cE
+  z-index: 1;
+}
+.items2{
+    background-color: yellowgreen;
+}
+.items3{
+    background-color: slateblue;
+}
+.items4{
+    background-color: royalblue;
+    grid-column:2/4;
+    grid-row:2/3;
+}
+.items5{
+    background-color: hotpink;
+}
+.items6{
+    background-color:goldenrod; 
+    grid-row:1/2;
+    grid-column:1/3;
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    background-color: white;
+}
+
+.container{
+     background-color: lightgrey;
+     width:720px;
+     margin:45px auto 0;
+     border:3px solid black;
+     border-radius: 5px;
+     display: grid;
+
+     grid-template-columns:505px;
+     grid-template-rows:120px 60px 100px 400px 50px;
+     grid-gap:15px;
+     grid-template-areas: "header header"
+                            "menu menu"
+                             "hero hero"
+                            "content sidebar"
+                            "footer footer";
+}
+.header{
+    background-color: orangered;
+    /*grid-area:1/1/2/3;
+    grid-area: header;
+}
+.Menu{
+    background-color: yellowgreen;
+     /*grid-area:2/1/3/3;
+     grid-area: menu;
+}
+.Hero{
+    background-color: silver;
+    /*grid-area:3/1/4/3;
+    grid-area: hero;
+}
+.content{
+    background-color:aquamarine;
+    /*grid-area:4/1/5/2;
+    grid-area: content;
+}
+.sidebar{
+    background-color:rebeccapurple;
+    /*grid-area:4/2/5/3;
+    grid-area: sidebar;
+}
+.Footer{
+    background-color: tan;
+    /*grid-area:5/1/6/3;
+    grid-area: footer;
+}
+
+.container{
+    width:500px;
+    background-color:lightgray;
+    border:2px solid black;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-150px;
+     padding:10px;
+     display:flex; 
+     flex-direction:row;
+     flex-wrap: nowrap;
+     justify-content:left;
+
+
+}
+.box1{
+    background-color: aqua;
+    flex-shrink: 0;
+}
+.box2{
+    background-color: cadetblue;
+}
+.box3{
+    background-color:olive;
+}
+.box4{
+    background-color: greenyellow;
+}
+.box5{
+    background-color:brown;
+}
+.box6{
+    background-color: orangered;
+}
+.box7{
+    background-color:yellow;
+}
+.box8{
+    background-color: darkmagenta;
+}
+.items{
+    font-size: large;
+    font-weight:bold;
+    color: black;
+    text-align: center;
+    margin:5px;
+    flex-grow: 1;
+    margin:auto;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{padding:0 0 0 40px;}
+
+#wrapper{
+    background-color: #eee;
+    list-style: none;
+    margin:50px;
+    padding:20px;
+}
+
+#wrapper li{
+    display:flex;
+    justify-content: flex-end;
+    padding:5px 0;
+}
+
+#wrapper li label{
+flex:1;
+}
+
+#wrapper li input{
+flex:3;
+}
+
+
+@media screen and(min-width:1200px) {
+    #wrapper li input{
+        flex:8;
+    }
+}
+
+@media screen and(min-width:992px) {
+    #wrapper li input{
+        flex:6;
+    }
+}
+
+@media screen and(min-width:768px) {
+    #wrapper li input{
+        flex:4;
+    }
+}
+
+@media screen and(min-width:500px) {
+    #wrapper li input{
+        flex:3;
+    }
+}
+
+@media screen and(min-width:300px) {
+    #wrapper li{
+        flex-direction: column;
+    }
+    #wrapper li input{
+        flex:3;
+    }
+}*/
+
+
+
+
+</style>
+
+
+
+
+<body>
+    <!--<div id="animation">
+        Shahzaib Shafique
+    </div> -->
+
+    <!--<div id="box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam. Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
+    </div>-->
+
+    <!--<span>Lorem ipsum dolor<br> sit amet, consectetur adipiscing elit<br> . Aenean vitae suscipit elit,<br>  et ultricies.</span> -->
+
+    <!--<q>Lorem ipsum dolor <q>sit amet, consectetur</q> adipiscing elit.</q>-->
+
+    <!--<div id="box">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam. Donec ultricies dui cursus quam maximus, eu sodales felis consequat. Aenean a feugiat massa. Nam at facilisis leo. Vestibulum ornare ex est, sit amet pellentesque dui tempor vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer luctus dolor rutrum pharetra bibendum.
+    </div>-->
+
+    <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae suscipit elit, et ultricies quam.</p>
+
+    <p class="text">SHAHZAIB</p>
+
+    <h1>Shahzaib Shafique</h1>
+    <div class="container">
+        <div class="items items1">First</div>
+        <div class="items items2">Second</div>
+        <div class="items items3">Third</div>
+        <div class="items items4">Fourth</div>
+        <div class="items items5">Fifth</div>
+        <div class="items items6">Sixth</div>
+    </div>
+
+    <div class="container">
+        <div class="items header">Header</div>
+        <div class="items Menu">Menu</div>
+        <div class="items Hero">Hero</div>
+        <div class="items content">content</div>
+        <div class="items sidebar">sidebar</div>
+        <div class="items Footer">Footer</div>
+    </div>
+
+    <div class="container">
+        <div class="items box1">one</div>
+        <div class="items box2">two</div>
+        <div class="items box3">three</div>
+        <div class="items box4">four</div>
+        <div class="items box5">five</div>
+        <div class="items box6">six</div>
+        <div class="items box7">seven</div>
+        <div class="items box8">eight</div>
+    </div>
+
+    <form action="">
+  <ul id="wrapper">
+    <li>
+        <label>Name</label>
+        <input type="text">
+    </li>
+    <li>
+        <label>Class Name</label>
+        <input type="text">
+    </li>
+    <li>
+        <label>Email Address</label>
+        <input type="Email">
+    </li>
+    <li>
+      <button>Save</button>
+    </li>
+  </ul>
+    </form>-->
+
+    
+
+</body>
+</html>
