@@ -7,7 +7,8 @@ body{
 }
 
 #container {
-    width: 1000px;              
+    max-width: 1000px;
+    width:100%;          
     background-color: #eee;
     margin: 45px auto 0;
     padding: 10px;
@@ -29,7 +30,7 @@ body{
 background: black;
 color: white;
 text-align: center;
-height:100px;
+min-height:100px;
 grid-area:header;
 padding: 20px;
 }
@@ -40,15 +41,23 @@ grid-area:menu;
 text-align: center;
 }
 
+#menu ul{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
 #menu li{
     display: inline;
+    margin:0 10px;
 }
 
 #menu li a{
     color: black;
     text-decoration: none;
-    padding:0 25px;
+    padding:8px 16px;
     font-weight: bold;
+    border-radius: 6px;
 }
 
 #menu li a:hover{
@@ -62,36 +71,80 @@ background-size:cover;
 background-position:center;
 min-height:250px;
 color:white;
-font-size: large;
+font-size:23px;
 padding:20px;
 grid-area:hero;
 }
 
+#hero h2{
+    margin:0;
+    font-size: 32px;
+    line-height: 1.4;
+}
+
 #content{
-    width:800px;
 background-color: white;
 grid-area:content;
-padding:0 10px 0 10px;
+padding:0 10px 10px 10px;
+}
+
+#content span{
+    font-weight: bolder;
 }
 
 #sidebar{
 background-color: darkgrey;
 grid-area:sidebar;
-padding:0 10px 0 10px;
+padding:0 10px 10px 10px;
+}
+#sidebar ul {
+    list-style-type: none; 
+    padding: 0;  
+    margin: 0;   
+}
+#sidebar li{
+  margin:10px 0;
 }
 
 #sidebar li a{
-    color: black;
+    color:black;
     text-decoration: none;
-    padding:0 25px;
-    font-weight: bold;
+}
+
+#sidebar li a:hover{
+    text-decoration: underline;
 }
 
 #footer{
 background-color: black;
-color: white;
-text-align: center;
 
+text-align: center;
 grid-area:footer;
 padding:10px;
-}    
+}  
+
+#footer a{
+ color: white;
+ text-decoration: none;
+}
+
+#footer a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    #container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "menu"
+            "hero"
+            "content"
+            "sidebar"
+            "footer";
+    }
+
+    #hero h2 {
+        font-size: 26px;
+    }
+}
