@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webPage3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<style>
+    body{
+       background: linear-gradient(135deg, #22c55e 20%, #0ea5e9 40%, #5177ca 80%);
+       background-blend-mode: difference;
+         margin:0;
+        padding:0;
+
+        display:grid;           
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+    }
+
+    #container{
+        width:550px;
+        height:338px;
+        background-color: white;
+       text-align: center;
+       position: relative; 
+      border-radius: 5px;
+     
+    }
+    #cross{
+        position: absolute;
+         top: 18px;
+      right: 20px;
+      font-size: 13px;
+      color: rgb(48, 47, 47);
+      cursor: pointer;
+    }
+    p{
+        font-size:15px;
+        font-weight:normal;
+        color:black;
+    }
+
+    #main{
+       margin:0px 20px 0px 20px;
+    }
+    #main p{
+        text-align: left;
+        margin-bottom:4px;
+    }
+    #main span{
+        color:gray;
+        font-weight: normal;
+        font-size:14px;
+        word-spacing:4px;
+
+    }
+   select {
+  width: 510px;
+  padding: 5px 35px 5px 5px; 
+  line-height: normal;  
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  position: relative;
+  margin-top: 0px;
+  display:block;
+}
+
+#box1 {
+    width: 250px;
+    height: 50px;
+    border: 2px solid rgb(3, 124, 223);
+    border-radius: 4px;
+    position: relative; 
+    float:left;
+    margin-top: 5px;
+}
+
+#box1 p {
+    font-size: 15px;
+    font-weight: normal;
+    color: rgb(0, 124, 226);
+    position: absolute;
+    bottom: 5px;      
+    left: 10px;
+    margin: 0;
+}
+#box1 span {
+
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(35, 148, 240);
+}
+
+#box2 {
+    width: 250px;
+    height: 50px;
+    border: 2px solid lightgray ;
+    border-radius: 4px;
+    position: relative; 
+    float:right;
+     margin-top: 5px;
+}
+
+#box2 p {
+    font-size: 15px;
+    font-weight: normal;
+    color:rgb(5, 3, 3);
+    position: absolute;
+    bottom: 5px;      
+    left: 10px;
+    margin: 0;
+}
+#box2 span {
+    font-size: 14px;
+    font-weight: normal;
+    color: gray;
+}
+
+button{
+    margin-top: 30px;
+    width:510px;
+    background:rgb(40, 123, 247);
+    color:white;
+    border:1px solid rgb(3, 124, 223);
+    border-radius: 3px;
+    height:30px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+#dot1{
+    color:rgb(3, 124, 223);
+}
+
+#dot {
+  margin-top: 14px;
+  text-align: center;
+}
+
+#dot span {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin: 0 2px;
+  border-radius: 50%;
+  background-color: lightgray;
+}
+
+#dot #dot1 {
+  background-color: rgb(3, 124, 223); 
+}
+
+
+</style>
+<body>
+    <div id="container">
+        <p>Create Assignment</p>
+  <i class="fa-solid fa-xmark" id="cross">
+  </i>
+<div id="main">
+<p>Class <br> <span>The class this assignment should belong to</span></p>
+
+<div id="selector">
+<select>
+<optgroup>
+    <option>US History</option>
+</optgroup>
+</select>
+</div>
+
+<p>Assignee Mode <br> <span>Choose how to assign this assignment</span></p>
+
+<div id="box1">
+<p>All Students <br> <span>Every enrolled student</span></p>
+</div>
+
+<div id="box2">
+<p>Individual Students<br> <span>Specific students</span></p>
+</div>
+
+
+<button>Continue</button>
+
+
+<div id="dot">
+    <span id="dot1"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+</div>
+
+</div>
+
+    </div>
+</body>
+</html>
