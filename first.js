@@ -710,7 +710,7 @@ console.log(disArr);
 let str="javascript";
 console.log("lenght:" ,str.length);
 console.log("UpperCase:" ,str.toUpperCase());
-console.log("3rd char:" ,str[2]);*/
+console.log("3rd char:" ,str[2]);
 
 let rno=10;
 let Uno=prompt("Input the random number b/w (1-10):");
@@ -719,3 +719,357 @@ while(Uno!=rno)
     console.log("OOP wrong guess,Again Input: ");
 }
    console.log("congratulations u guess it right! ");
+
+
+   //Function in JS(block of code to perform a specific task)//
+  // syntax:(function functionName(){do some work})//
+  //to avoid redundancy (repitition)//
+
+  function myFunction(){
+    console.log("I lone JS!");
+    console.log("I learn JS!");
+  }
+   myFunction();
+
+  function myFunction(msg)
+  {
+    console.log(msg);
+  }
+  myFunction("I love JS");
+
+
+  function sum(a,b)
+  {
+    console.log("sum:" ,a+b);
+  }
+  sum(2,2);
+  sum(7,3);
+
+  function sum(x,y)
+  //local variables//
+  {
+    s=x+y;
+    return s;
+  }
+  let val=sum(1,1);
+  console.log(val);
+
+  //parameters are local variables of the function whose scope remains within the block of the function//
+
+  //Arrow Function(shortest method to perform functions)//
+  //syntax(const functionName=(parameters)=>{do some work})//
+
+  function sum(a,b)
+  {
+    return a+b;
+  }
+  
+  function mul(a,b)
+  {
+    return a*b;
+  }
+  let res1=sum(5,5);
+  let res2=mul(5,5);
+  console.log("Sum:" ,res1);
+  console.log("Mul:" ,res2);
+
+//Modern JS//
+  const sum=(a,b)=>{
+    console.log(a+b);
+  }
+  sum(3,3);
+
+  const mul=(x,y)=>
+{
+    return x*y;// when this function is going to be called then it will return the result to that calling function//
+}
+let res=mul(5,4);
+console.log("Mul:" ,res);//these arrow functions are basically used for the small type of tasks like we have to to small calculations then we prefer it//
+
+const printHello=()=>
+{
+console.log("Hello World!");
+}
+printHello();
+
+
+//Practice Questions//
+
+//1//
+
+function vowelsReturn(x)
+{
+    let count=0;
+    for(let i=0 ;i<x.length;i++)
+    {
+      if(x[i]==="a"||x[i]==="e"||x[i]==="i"||x[i]==="o"||x[i]==="u"||
+        x[i]==="A"||x[i]==="E"||x[i]==="I"||x[i]==="O"||x[i]==="U")
+      {
+ count++;
+      }
+    }
+     return count;
+}
+let res=vowelsReturn("Shahzaib");
+console.log(res);
+
+const countVowels=(x)=>
+{
+    let count=0;
+    for(let str of x)
+    {
+        
+        if(str==="a"||str==="e"||str==="i"||str==="o"||str==="u"||
+        str==="A"||str==="E"||str==="I"||str==="O"||str==="U")
+        {
+            count++;
+        }
+    }
+    return count;
+}
+let res=countVowels("Shafique");
+console.log("Count:" ,res);
+
+
+//function methods like built in functions//
+//forEach Loop//
+//Higher order Function/method(that takes another function as a parameter in it)
+//arr.forEach(callBackFunction)//
+//A call back is a function passed an argument to another function//
+
+//In JS ,functions also like passing as aparameters//
+// callback function is something like parameters in another function//
+
+let arr=["shahzaib","shafique"];
+
+arr.forEach((val)=>{   //val,ind,arr//
+    console.log(val.toUpperCase());
+})
+
+let arr=[1,2,3,4,5];
+    arr.forEach((val)=>{
+     console.log(val*val);
+    })   //used to perform some tasks/action/calculation on each individual indexes of arr//
+
+     //Maps (Another method of Arr)//
+     //similer to for each arr but given the res to new arr or creates the new arr//
+     //val,ind,arr//
+     //syntax: arr.map(callbackfnc(val,ind,arr))////but generally used only val//
+
+     let num=[2,4,6,8];
+    let newArr= num.map((val)=>{
+       return val*val;
+     })
+     console.log(newArr);
+
+     //filter method like filter ur desire tasks//
+
+     let arr=[1,2,3,4,5,6,7,8,9,10];
+     let newArr=arr.filter((val)=>{
+        return (val%2===0);
+     })
+     console.log(newArr);
+
+
+     //Another method Reduce operation single val at the end we need//
+
+     let arr=[1,2,3,4,5];
+     let sumArr=arr.reduce((res,val)=>{
+        return res+val;
+     })
+     console.log(sumArr);
+
+     let arr=[2,3,10,4,1];
+     let largElement=arr.reduce((prev,curr)=>{
+        return prev>curr?prev:curr;
+     })
+     console.log(largElement);
+
+
+     //practice//
+
+//1//
+
+let marks=[100,90,91,84,96,56,33,92];
+let res=marks.filter((val)=>{
+    return val>90;
+})
+console.log(res);
+
+//2//
+
+let sum=[1,2,3,4,5,6];
+let resSum=sum.reduce((res,val)=>{
+    return res+val;
+})
+console.log(resSum);
+
+let mul=[1,2,3,4];
+let resprod=mul.reduce((res,val)=>{
+    return res*val;
+})
+console.log(resprod);
+
+
+let n=prompt("Enter the nmbers(1ton):");
+let arr=[0];
+for(let i=0;i<n;i++)
+{
+    arr[i-1]=i;
+}
+console.log(arr);
+
+
+//very imp concept//
+//DOM(Document Object Model)//
+//make dynamic changes in our webpage//
+//we access all html code in JS then they become document and this object available in window//
+//we access our html in JS  where window object have another document object where we acces//
+//console.dir are basically used to print out the documentation and method of object like DOM//
+//automatically created by the browser//
+//when we have to change something in website at the runtime then we cant directly required change in our html and css then we change it in JS by using DOM//
+
+//console.dir(window.document);
+//console.log(document.body);
+
+//DOM manipulation//
+
+//#id unique or individual//
+
+//let heading=document.getElementById("heading")
+//console.dir(heading);
+
+//.class  for all//
+
+//let heading=document.getElementsByClassName("heading")
+//console.dir(heading);
+
+//let para=document.getElementsByTagName("p");
+//console.dir(para);
+
+//Query selector//
+//let element=document.querySelectorAll("p")
+//console.dir(element);
+
+//let element=document.querySelectorAll(".heading")
+//console.dir(element);
+
+let div=document.querySelector("div");
+console.dir(div);
+
+let h1=document.querySelector("h1");
+console.dir(h1);
+
+let add=document.querySelector("h2");
+add.innerText=add.innerText + " from Apna College Students "
+console.dir(add);
+
+let _box=document.querySelectorAll("_box");
+console.dir(_box[0]);
+
+let div=document.querySelector("div");
+div.style.backgroundColor="green";
+
+console.dir(div);
+
+let id=document.querySelector("id");
+console.dir(id);
+
+let newbtn=document.createElement("button");
+newbtn.innerText="Click!";
+console.dir(newbtn);
+let p=document.querySelector("p")
+p.after(newbtn);
+
+let para=document.querySelector("p")
+console.dir(para);
+para.remove(para);
+
+let newbtn=document.createElement("button");
+newbtn.innerText="Click me!";
+newbtn.style.backgroundColor="red";
+newbtn.style.color="white";
+console.dir(newbtn);
+document.querySelector("body").prepend(newbtn);
+
+//Events(something occurs on screen like when click on submit button file submitted so its a event)//
+
+let btn1=document.querySelector("#btn1");
+btn1.onclick=(evt)=>//event object//
+{
+    console.log(evt);
+    console.log(evt.target);
+    console.log(evt.type);
+    console.log(evt.clientX ,evt.clientY);//position like used in the game//
+    /*console.log("btn1 was clicked");
+    let a=25;
+    a++;
+    console.log(a);
+}
+
+let div=document.querySelector("div");
+div.onmouseover=()=>{
+    console.log("pointed on div box!");
+}
+
+//event objects(special object having the detail of event)//
+
+//event listener//
+
+btn1.addEventListener("click",(evt)=>
+    {console.log("btn1 was clicked")
+    console.log(evt);
+    console.log(evt.type);
+    });
+
+btn1.addEventListener("click",()=>
+    {console.log("btn1 was clicked-handler2")});
+
+let btn1=document.querySelector("#btn1");
+
+btn1.addEventListener("click", ()=>{
+    console.log("btn1 was clicked-handler1");
+});
+btn1.addEventListener("click", ()=>{
+    console.log("btn1 was clicked-handler2");
+});
+const handler3= ()=>{
+    console.log("btn1 was clicked-handler3");
+};
+btn1.addEventListener("click", ()=>{
+    console.log("btn1 was clicked-handler4");
+});
+
+btn1.removeEventListener("click",handler3);
+
+let modeBtn=document.querySelector("#mode");
+let currMode="light";
+
+modeBtn.addEventListener("click",()=>{
+if(currMode==="light")
+{
+    currMode="dark";
+    document.querySelector("body").style.backgroundColor="black";
+}
+else if(currMode==="dark")
+{
+    currMode="light";
+    document.querySelector("body").style.backgroundColor="white";
+}
+console.log(currMode);
+});*/
+
+let divbox=document.querySelector(".divbox");
+let mOver="light";
+divbox.addEventListener("mouseover",()=>{
+if(mOver==="light")
+{
+    document.querySelector("body").style.backgroundColor="Black";
+    mOver="dark";
+}
+else if(mOver==="dark")
+{
+    document.querySelector("body").style.backgroundColor="white";
+    mOver="light";
+}
+});
