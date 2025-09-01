@@ -20,7 +20,7 @@ LASTNAME="Basit";
 console.log(lastname);
 console.log(LASTNAME);
 
-//console="Shahzaib Shafique"  fixed or reserved words cant be used as a vaiable// 
+//console="Shahzaib Shafique"  fixed or reserved words cant be used as a vaiable//
 
 let fullName="Tech Titans";
 let age=21;
@@ -35,7 +35,7 @@ let a;
 console.log(a);
 /*const a; this will create error because its fixed so first time it initialize with some value one time*/
 
-/* block  
+/* block
 {
     let a=4;
     /*let a=4; this can't be redeclared cause an error but updated
@@ -1057,7 +1057,7 @@ else if(currMode==="dark")
     document.querySelector("body").style.backgroundColor="white";
 }
 console.log(currMode);
-});*/
+});
 
 let divbox=document.querySelector(".divbox");
 let mOver="light";
@@ -1073,3 +1073,448 @@ else if(mOver==="dark")
     mOver="light";
 }
 });
+
+//OOP in JS//
+//v.imp//
+
+//objects(having many properties/ behaviours & methods)//
+//normal object //
+const student={
+    age:21,
+    fullname:"shahzaib",
+    marks:94.4,
+    printMarks: function(){  //methods//
+        console.log("marks=" ,this.marks);//student.marks//
+    }
+};
+//prototype is basically object in another object//
+//reference to an object//
+//having some properties and special behaviours//
+//inherited automatically//
+//In Js,internally Arr is an Object//
+
+const employee={
+    calcTax(){
+        console.log("Tax rate is 10%");
+    }
+};
+
+const shahzaib={
+    salary:250000,
+   calcTax(){
+console.log("Tax rate is 20%");
+   }
+}; //if object and prototype having same method,object's method will be used//
+
+shahzaib.__proto__=employee;
+
+
+//classes in JS//
+
+class Car {
+    constructor(brand,milage){
+        console.log("creating new object");
+        this.brand=brand;
+        this.milage=milage;
+    }
+    start() {
+        console.log("start");
+    }
+
+    stop() {
+        console.log("stop");
+    }
+}
+
+//objects//
+let fortuner=new Car("fortuner",10);
+console.log(fortuner);
+let lexus=new Car(" lexus",20);
+console.log(lexus);
+
+class Parent{
+    hello(){
+        console.log("hello");
+    }
+}
+//inheritance//
+class Child extends Parent{}
+let object=new Child();
+
+class Person{
+    constructor(){
+        this.species="homo species";
+    }
+    eat(){
+        console.log("eat");
+    }
+    sleep(){
+        console.log("sleep");
+    }
+     work(){
+        console.log("do nothing");
+    }
+}
+class Engineer extends Person{
+    work(){
+        console.log("solve problem"); //method overiding//
+    }
+//method overriding is basically when we use the same method in child class which
+//already exist in parent class then this child method run//
+}
+class doctor extends Person{
+    treat(){
+        console.log("treat patients");
+    }
+}
+let shahzaib=new Engineer();
+let aman=new doctor();
+
+//super keyword//
+//when we want to access the methods & properties of super classes//
+//like we want to access parent from child//
+
+
+//overriding: child class replace the method of parent class//
+//super:child class reuse the method of parent class//
+
+//Practice//
+
+//1//
+
+let Data = "This is secret information";
+class User {
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+    }
+
+    viewData() {
+        console.log("Data=", Data);
+    }
+}
+
+class Admin extends User {
+    constructor(name, email) {
+        super(name, email);
+    }
+
+
+    editData() {
+        Data = "some new val"
+    }
+}
+
+let admin1 = new Admin("admin", "admin@123.com");
+
+let st1 = new User("shahzaib", "abc@12.com");
+let st2 = new User("aman", "abc@12.com");
+
+
+//try-catch(error handling technique)//
+
+
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    eat() {
+        console.log("this Person can eat");
+    }
+    sleep() {
+        console.log("this Person can sleep");
+    }
+    work() {
+        console.log("nohting to do work")
+    }
+}
+
+class Employee extends Person {
+    constructor(name, age, salary) {
+        super(name, age);
+        this.salary = salary;
+    }
+    work() {
+        console.log("Employee works on company projects")
+    }
+
+}
+
+class Manager extends Employee {
+
+    constructor(name, age, salary) {
+        super(name, age, salary);
+    }
+
+    work() {
+        super.work();
+        console.log("Manager manages team");
+    }
+}
+
+let emp = new Employee("shahzaib", 21, 250000);
+emp.eat();
+emp.work();
+let man = new Manager("Aman", 25, 230000);
+man.sleep();
+man.work();
+
+
+class Product{
+    constructor(name,price){
+        this.name=name;
+        this.price=price;
+    }
+    showDetails(){
+        console.log("this is new detail");
+    }
+}
+class User extends Product{
+      constructor(name,price,userName){
+        super(name,price);
+        this.userName=userName;    
+    }
+    viewData(Product){
+        product.showDetails();
+    }
+}
+class Admin extends User{
+    editProducts(product,newPrice){
+  product.price=newPrice;
+    }
+    viewData(){
+        console.log("Admin is viewing Product data");
+    }
+}
+
+
+//Async-Await>Promises>callbacks//
+
+//Synchronous(our code execute in pattern in sequence  we write it like line by line)//
+
+console.log("1");
+console.log("2");
+console.log("3");
+console.log("4");
+
+//Asynchronous
+
+//code1
+//code2
+//API(which can takes some time)
+//code3
+//code4(then it run also code3 and code4 and when API(prints at the end) run at once then code3 and code4 show on console)
+
+console.log("1");
+console.log("2");
+function hello(){
+    console.log("hello");
+}
+setTimeout(hello,4000) //2s=2000ms(millisec)//
+console.log("3");
+console.log("4");//this is Asynchronous//
+
+//callback(when we call a function into another function then its called callback function)
+
+function sum(a,b){
+    console.log(a+b);
+}
+function calculator(a,b,sum){
+sum(a,b);
+}
+calculator(1,2,sum);
+
+const hello=()=>{
+    console.log("hello");
+}
+setTimeout(hello,3000);
+
+//callback hell nested callbacks//
+
+let age = 19;
+if (age >= 18) {
+    if (age >= 60) {
+        console.log("senior");
+    } else {
+        console.log("middle");
+    }
+
+}
+else {
+    console.log("child")
+}
+
+function getData(dataID, getNextdata) {
+    setTimeout(() => {
+        console.log("data=", dataID);
+        getNextdata();
+    }, 2000);
+}
+//callback hell this is nested callback which is problem(pyramid of dome)//
+getData(1, () => {
+    getData(2, () => {
+        getData(3, () => {
+            getData(4)
+        });
+    });
+});
+
+//To overcome the problem of callback hell the new technique is Promises
+//Promises are the objects in JS //
+//Promises are the solution of callback hell//
+
+//resolve & reject are also the two functions or callbacks 
+//Pending:the res is undefined
+//resolve:the task is fullfilled and done having some val
+//reject:the task is fullfilled but generating some error//
+
+//.then() & .catch()//
+//when we have to do some task after fullfil the promise then we use .then()//
+//after reject when some work we use .catch()//
+
+let promise=new Promise((resolve, reject) => {
+    console.log("I am a promise");
+    resolve(123);
+    reject("some error");
+})
+
+function getData(dataID,getNextdata){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+        console.log("data=", dataID);
+        resolve("success");
+        getNextdata();
+    }, 5000);
+    });
+}
+
+
+const getPromise = () => {
+    return new Promise((resolve, reject) => {
+        console.log("I am a Promise");
+        /*resolve("success");
+        reject("Network error");
+    });
+};
+
+let promise = getPromise();
+
+promise.then((res) => {
+    console.log("Promise fullfilled");
+    });
+
+promise.catch((err) => {
+    console.log("Promise rejected",err);
+})
+
+
+//Promise Chain//
+// where we see timeout is used then we can say that is a Asychronous//
+function asyncfunc1() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("some data 1");
+            resolve("success");
+        }, 4000);
+    });
+}
+
+
+function asyncfunc2() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("some data 2");
+            resolve("success");
+        }, 4000);
+    });
+}
+console.log("fetching Data 1");
+asyncfunc1().then((res) => {
+    console.log("fetching Data 2");
+    asyncfunc2().then((res) => { });
+});
+
+//Async-Await//
+
+//helps to make Asynchronous programming more simple and easy//
+//Async function always return a promise//
+
+
+async function hello() {
+    console.log("hello");
+}
+
+
+function API() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("wether data");
+            resolve(200);//200 means success like its code//
+        }, 2000);
+    });
+};
+
+async function getwetherData() {
+    await API();//1st call//
+    await API();//2nd call//
+}
+
+function getData(dataID) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("data", dataID);
+            resolve("success");
+        }, 2000);
+    });
+};
+async function getAllData() {
+    console.log("getting data1....");
+    await getData(1);
+     console.log("getting data2....");
+    await getData(2);
+     console.log("getting data3....");
+    await getData(3);
+     console.log("getting data4....");
+    await getData(4);
+     console.log("getting data5....");
+    await getData(5);
+     console.log("getting data6....");
+    await getData(6);
+}
+
+/*(async function() {
+     console.log("getting data1....");
+    await getData(1);
+     console.log("getting data2....");
+    await getData(2);
+     console.log("getting data3....");
+    await getData(3);
+     console.log("getting data4....");
+    await getData(4);
+     console.log("getting data5....");
+    await getData(5);
+     console.log("getting data6....");
+    await getData(6);
+})();*/
+
+//IIFE functions dont having name and run or execute only one time we not have to call them//
+//immediately invoked & only one time it execute//
+//we dont have to reuse it//
+
+
+//API(Application Programming Interface) fetching in JS//
+//through which we got the final result/output//
+//basically API works on the request/response cycle//
+
+//for the sending and receiving of data fetching of API technique used//
+
+
+const URL="https://cat-fact.herokuapp.com/facts";
+let promise=fetch(URL);
+console.log(promise);
+
+const getFacts=async()=>{
+    let promise=await fetch(URL);
+    console.log(response);
+}
